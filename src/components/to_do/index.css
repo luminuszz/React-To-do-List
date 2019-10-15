@@ -1,0 +1,52 @@
+body{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  justify-content: center;
+}
+
+.container{
+  height: 100px;
+  width: 300px;
+  margin: 150px;
+  margin-left: 450px;
+  margin-right: 450px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  background-color: rgb(31, 93, 187);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input{
+  width: 250px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+label{
+  flex-direction: column;
+}
+
+button{
+  width: 100px;
+  height: 25px;
+  opacity: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all 0.5s;
+  cursor: pointer;
+  color:  rgb(31, 93, 187);;
+  
+}
+
+button:hover{
+ background: crimson;
+ color: white;
+
+}
