@@ -1,0 +1,45 @@
+body{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  justify-content: center;
+}
+
+
+
+.tableStyle{
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-content: center;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+  
+  
+
+}
+
+.tableStyle th{
+
+  
+
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  margin-left: 20px;;
+}
