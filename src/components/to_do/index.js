@@ -12,6 +12,7 @@ class TodoList extends Component {
     };
     this.submitTodo = this.submitTodo.bind(this);
     this.logTodo = this.logTodo.bind(this);
+    this.deleteTodo = this.deleteTodo.bind(this);
   }
   submitTodo(e) {
     let state = this.state;
@@ -32,6 +33,15 @@ class TodoList extends Component {
     testeLength <= 0 ? alert("Escreva algo") : console.log('ok');
     console.log(this.state.itens);
     e.preventDefault()
+  }
+
+  deleteTodo(key){
+    console.log("Deletar Todo " + key);
+    let state = this.state
+    let filtro = state.itens.filter((item)=>{
+      return( item.key !== key);
+    })
+    this.setState({itens:filtro});
   }
 
   render() {
@@ -60,7 +70,7 @@ class TodoList extends Component {
 
         </div>
 
-        <TableTodo lista ={this.state.itens}/>
+        <TableTodo lista ={this.state.itens} delete={this.deleteTodo}/>
       </div>
     );
   }
