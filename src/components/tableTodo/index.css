@@ -9,6 +9,7 @@ body{
 
 
 .tableStyle{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: initial;
@@ -21,11 +22,7 @@ body{
 
 }
 
-.tableStyle th{
 
-  
-
-}
 
 table {
   font-family: arial, sans-serif;
@@ -41,5 +38,10 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-  margin-left: 20px;;
+  margin-left: 20px;
+  width: 100%;
+}
+
+button{
+  cursor: pointer;
 }

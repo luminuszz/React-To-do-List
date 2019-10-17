@@ -11,7 +11,7 @@ class TableTodo extends Component {
 
     this.delete = this.delete.bind(this)
   }
-
+  // Passa a key da to Do clicada como uma prop 
   delete(key){
     this.props.delete(key);
 

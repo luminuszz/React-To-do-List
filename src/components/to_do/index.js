@@ -5,15 +5,18 @@ import "./index.css";
 
 class TodoList extends Component {
   constructor(props) {
+    // Constructor 
     super(props);
     this.state = {
       tarefa: '',
       itens: []
     };
+    // bind
     this.submitTodo = this.submitTodo.bind(this);
     this.logTodo = this.logTodo.bind(this);
     this.deleteTodo = this.deleteTodo.bind(this);
   }
+  // Função para adcionar To Dos a array
   submitTodo(e) {
     let state = this.state;
     if (this._tarefaInput.value !== "") {
@@ -21,12 +24,14 @@ class TodoList extends Component {
         text: this._tarefaInput.value,
         key: Date.now()
       };
+      // Altera a state com o valor existente e o novo valor na array
       this.setState({ itens: [...state.itens, newTodo] });
+      // Limpa a state do input
       this.setState({ tarefa: '' })
     }
     e.preventDefault()
   }
-
+  // Função que vizualiza os logs do to Do
   logTodo(e) {
     let state = this.state
     let testeLength = state.itens.length
@@ -34,7 +39,7 @@ class TodoList extends Component {
     console.log(this.state.itens);
     e.preventDefault()
   }
-
+  // Função que deleta uma to Do usando como parametro o objeto "key"
   deleteTodo(key){
     console.log("Deletar Todo " + key);
     let state = this.state
